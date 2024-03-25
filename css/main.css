@@ -1,0 +1,218 @@
+/*
+  STYLE GUIDE STYLING 
+  Default styling for the style guide 
+*/
+
+
+@font-face {
+  font-family: 'Roobert Pro';
+  src: url(RoobertPROTRIAL-Regular.otf), 
+      url(RoobertPROTRIAL-Regular.woff2), 
+      url(RoobertPROTRIAL-Regular.woff);  
+}
+
+@font-face {
+  font-family: 'Roobert Pro SemiBold';
+  src: url(RoobertPROTRIAL-SemiBold.otf),
+      url(RoobertPROTRIAL-SemiBold.woff2), 
+      url(RoobertPROTRIAL-SemiBold.woff);   
+}
+
+@font-face{
+  font-family: 'SF';
+  src: url(SF-Pro-Text-Regular.otf);
+}
+
+@font-face{
+  font-family: 'SF Mono' ;
+  src: url(SF-Mono-Medium.otf);
+}
+
+
+body {
+  font-family: sans-serif;
+  padding: 10rem;
+}
+
+
+
+.element {
+  padding-bottom: 2rem;
+  border-top-width: 0.15rem;
+  border-top-style: solid;
+  border-top-color: black;
+}
+
+h1{
+  color: #000;
+  font-family: "Roobert Pro";
+  font-size: 2.25rem;
+  font-style: italic;
+  font-weight: 600;
+  line-height: normal;
+  }
+
+h2 {
+  margin-top: 0rem;
+  color: #000;
+  font-family: "Roobert Pro";
+  font-size: 1.75rem;
+  font-style: italic;
+  font-weight: 300;
+  line-height: normal;
+}
+
+h3 {
+  color: #000;
+  font-family: "Roobert Pro SemiBold";
+  font-size: 1.75rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%; /* 2.275rem */
+}
+
+h4 {
+  color: #989898;
+  font-family: "SF Mono";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+p {
+  margin-top: 1rem;
+  font-family: 'SF', sans-serif; 
+  font-size: 0.875rem;
+}
+
+nav a:hover, nav a:focus {
+  text-decoration: none;
+}
+
+
+.tag{
+  display: flex;
+  padding: 0.5rem 1.0625rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  border-radius: 0.625rem;
+  background: #EFEFEF;
+  margin-top: 0.15rem;
+  margin-bottom: 0.15rem;
+}
+
+code {
+  background-color: #EEE;
+  padding: 0.5rem;
+  display: block;
+}
+
+
+
+
+/* 
+  INTERACTIVE ELEMENTS -------------------
+*/
+
+/* Styling for the navigation button */
+
+.in-text{
+  display: flex;
+  width: 9.3125rem;
+  padding: 0.3125rem 0.458rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  border-radius: 1.875rem;
+  background: #0177E8;
+
+  font-family: 'Roobert Pro SemiBold', sans-serif; 
+  font-size: 0.875rem;
+  text-decoration: none;
+  color: white;
+  transition: 0.3s ease;
+}
+.in-text:hover{
+  background: #004b92;
+}
+
+
+.button-nav {
+  display: flex;
+  width: 10.1875rem;
+  height: 2.9375rem;
+  padding: 0.3125rem 0.1875rem;
+  margin-top:1rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  border-radius: 0.625rem;
+  background: #000;
+
+  color: #FFF;
+  font-family: 'Roobert Pro SemiBold', sans-serif; 
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 200;
+}
+
+.button-nav:hover, .button-nav:focus {
+  background-color: rgb(200,200,200);
+}
+
+.image-container {
+  width: 36.9375rem;
+  height: 23.625rem;
+  overflow: hidden; /* this will prevent the image from going outside the container */
+  border-radius: 0.625rem;
+}
+
+.link-image {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease-in-out; /* this will smooth the zooming effect */
+}
+
+.image-container:hover .link-image {
+  transform: scale(1.1); /* adjust this value to control the zoom level */
+}
+
+
+.project-intro {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 4.875rem;
+}
+.brief-left{
+  max-width: 20rem;
+}
+
+
+@media screen and (max-width: 768px) {
+  .project-intro {
+    flex-direction: column;
+  }
+}
+
+
+.tag {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+
+
+/* 
+  TEXT ELEMENTS -------------------
+*/
+
+
+
+
+/* 
+  COMBINED ELEMENTS -------------------
+*/
