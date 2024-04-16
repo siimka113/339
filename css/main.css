@@ -1,45 +1,104 @@
-/*
-  STYLE GUIDE STYLING 
-  Default styling for the style guide 
-*/
 
+
+/*UNCOMPRESSED CSS FILE, NOT USED IN HTML BUT EASIER TO READ FOR REFERENCE. main-dist.css IS THE MINIFIED ONE*/
+
+
+/*IMPORT FONTS*/
 
 @font-face {
   font-family: 'Roobert Pro';
-  src: url(RoobertPROTRIAL-Regular.otf), 
-      url(RoobertPROTRIAL-Regular.woff2), 
-      url(RoobertPROTRIAL-Regular.woff);  
+  src: url(RoobertPROTRIAL-Regular.otf),
+    url(RoobertPROTRIAL-Regular.woff2),
+    url(RoobertPROTRIAL-Regular.woff);
 }
 
 @font-face {
   font-family: 'Roobert Pro SemiBold';
   src: url(RoobertPROTRIAL-SemiBold.otf),
-      url(RoobertPROTRIAL-SemiBold.woff2), 
-      url(RoobertPROTRIAL-SemiBold.woff);   
+    url(RoobertPROTRIAL-SemiBold.woff2),
+    url(RoobertPROTRIAL-SemiBold.woff);
 }
 
-@font-face{
+@font-face {
   font-family: 'SF';
   src: url(SF-Pro-Text-Regular.otf);
 }
 
-@font-face{
-  font-family: 'SF Mono' ;
+@font-face {
+  font-family: 'SF Mono';
   src: url(SF-Mono-Medium.otf);
 }
 
+/*BASIC STYLING*/
 
 body {
   font-family: sans-serif;
   width: auto;
-  
+
 }
 
-main{
-  padding: 10%;
+header {
+  background-color: #F4F4F4;
+  padding: 0.5rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
 }
 
+main {
+  margin-left: 8%;
+  margin-right: 8%;
 
+}
+
+main>section {
+  margin-bottom: 5rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Roobert Pro";
+}
+
+h1 {
+  font-size: 2.25rem;
+  font-style: italic;
+  font-weight: 600;
+  line-height: normal;
+  color: #000;
+}
+
+h2 {
+  font-size: 1.25rem;
+  font-style: italic;
+  font-weight: 300;
+  line-height: normal;
+  color: #000;
+}
+
+h3 {
+  font-family: "Roobert Pro SemiBold";
+  font-size: 1.75rem;
+  font-weight: 500;
+  line-height: 130%;
+  color: #000;
+}
+
+h4 {
+  font-family: "SF Mono";
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: normal;
+  color: #989898;
+  text-transform: uppercase;
+}
+
+p {
+  margin-top: 1rem;
+  font-family: 'SF', sans-serif;
+  font-size: 1.2rem;
+}
 
 .element {
   padding-bottom: 2rem;
@@ -48,104 +107,59 @@ main{
   border-top-color: black;
 }
 
-h1{
-  color: #000;
-  font-family: "Roobert Pro";
-  font-size: 2.25rem;
-  font-style: italic;
-  font-weight: 600;
-  line-height: normal;
-  }
 
-h2 {
-  margin-top: 0rem;
-  color: #000;
-  font-family: "Roobert Pro";
-  font-size: 1.75rem;
-  font-style: italic;
-  font-weight: 300;
-  line-height: normal;
-}
+/*LINKS AND NAVIGATION*/
 
-h3 {
-  color: #000;
-  font-family: "Roobert Pro SemiBold";
-  font-size: 1.75rem;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 130%; /* 2.275rem */
-}
-
-h4 {
-  color: #989898;
-  font-family: "SF Mono";
-  font-size: 1rem;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-  text-transform: uppercase;
-}
-
-p {
-  margin-top: 1rem;
-  font-family: 'SF', sans-serif; 
-  font-size: 1.2rem;
-}
-
-nav a:hover, nav a:focus {
+nav a:hover,
+nav a:focus {
   text-decoration: none;
 }
 
-
-.tag{
+nav {
   display: flex;
-  padding: 0.5rem 1.0625rem;
-  justify-content: center;
-  align-items: center;
-  gap: 0.625rem;
-  border-radius: 0.625rem;
-  background: #EFEFEF;
-  margin-top: 0.15rem;
-  margin-bottom: 0.15rem;
+  justify-content: space-between;
 }
 
-code {
-  background-color: #EEE;
-  padding: 0.5rem;
-  display: block;
+.links {
+  display: flex;
+  gap: 3rem;
 }
 
-
-main > section {
-  margin-bottom: 5rem; /* Adjust as needed */
-}
-
-
-
-/* 
-  INTERACTIVE ELEMENTS -------------------
-*/
-
-/* Styling for the navigation button */
-
-.in-text{
+.in-text {
   display: flex;
   width: 9.3125rem;
   padding: 0.3125rem 0.458rem;
   justify-content: center;
   align-items: center;
   gap: 0.625rem;
+  margin-bottom:0.5rem;
   border-radius: 1.875rem;
   background: #0177E8;
 
-  font-family: 'Roobert Pro SemiBold', sans-serif; 
+  font-family: 'Roobert Pro SemiBold', sans-serif;
   font-size: 0.875rem;
   text-decoration: none;
   color: white;
   transition: 0.3s ease;
 }
-.in-text:hover{
+
+.in-text:hover {
   background: #004b92;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  font-family: 'Roobert Pro SemiBold', sans-serif;
+  font-size: 1rem;
+  text-decoration: none;
+  color: rgb(131, 131, 131);
+  transition: 0.3s ease;
+}
+
+.nav-links:hover {
+  color: #000000;
+  text-decoration: underline;
 }
 
 
@@ -154,7 +168,7 @@ main > section {
   width: 10.1875rem;
   height: 2.9375rem;
   padding: 0.3125rem 0.1875rem;
-  margin-top:1rem;
+  margin-top: 1rem;
   justify-content: center;
   align-items: center;
   gap: 0.625rem;
@@ -162,82 +176,67 @@ main > section {
   background: #000;
 
   color: #FFF;
-  font-family: 'Roobert Pro SemiBold', sans-serif; 
+  font-family: 'Roobert Pro SemiBold', sans-serif;
   text-decoration: none;
   font-size: 1rem;
   font-weight: 200;
 }
 
-.button-nav:hover, .button-nav:focus {
-  background-color: rgb(200,200,200);
+.button-nav:hover,
+.button-nav:focus {
+  background-color: rgb(200, 200, 200);
 }
 
+
+
+/*EXTRAS*/
+code {
+  background-color: #EEE;
+  padding: 0.5rem;
+  display: block;
+}
+
+.tag {
+  padding: 0.5rem 1.0625rem;
+  border-radius: 0.625rem;
+  background: #EFEFEF;
+  margin-top: 0.15rem;
+  margin-bottom: 0.15rem;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+
+/*IMAGES*/
+
+
 .image-container {
-  width: 36.9375rem;
-  height: 23.625rem;
-  overflow: hidden; /* this will prevent the image from going outside the container */
+  width: auto;
+  max-width: 80rem;
+  overflow: hidden;
+  /* this will prevent the image from going outside the container */
   border-radius: 0.625rem;
 }
 
 .link-image {
   width: 100%;
   height: auto;
-  transition: transform 0.3s ease-in-out; /* this will smooth the zooming effect */
+  transition: transform 0.3s ease-in-out;
+  /* this will smooth the zooming effect */
 }
 
 .image-container:hover .link-image {
-  transform: scale(1.1); /* adjust this value to control the zoom level */
-}
-
-
-.project-intro {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  gap: 4.875rem;
-}
-.brief-left{
-  max-width: 20rem;
-}
-
-
-@media screen and (max-width: 768px) {
-  .project-intro {
-    flex-direction: column;
-  }
-}
-
-
-.tag {
-  display: inline-block;
-  white-space: nowrap;
+  transform: scale(1.1);
+  /* adjust this value to control the zoom level */
 }
 
 
 
-/* 
-  TEXT ELEMENTS -------------------
-*/
-
-
-
-
-/* 
-  COMBINED ELEMENTS -------------------
-*/
-
-
-header {
-  background-color: #F4F4F4;
-  padding: 30px 60px;
-}
+/*HOME PAGE */
 
 .hero {
   display: flex;
-  align-items: center;
-  align-content: center;
   gap: 5rem 10rem;
-  flex-wrap: wrap;
 }
 
 .hero-left {
@@ -251,7 +250,7 @@ header {
 .hero-right {
   width: 9.84888rem;
   height: 9.13125rem;
-  flex-shrink: 0;
+  align-self: center;
 }
 
 .hero-text h1 {
@@ -260,18 +259,21 @@ header {
   font-style: normal;
   font-weight: 400;
   line-height: 115%;
+  padding-right: 6rem;
 }
 
 .hero-text h2 {
   color: #000;
   font-family: "Roobert Pro";
-  font-size: 2.25rem;
+  font-size: 1.75rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 130%; /* 2.925rem */
+  line-height: 130%;
+  padding-right: 6rem;
 
- 
+
 }
+
 .hero-text p {
   color: #000;
   width: 26.5625rem;
@@ -279,108 +281,178 @@ header {
   font-size: 1rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 140%; /* 1.4rem */
+  line-height: 140%;
+  padding-right: 6rem;
 }
 
-/* Media Query for Responsive Layout */
-@media (max-width: 1000px) {
+.project-intro {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 10rem;
+}
+
+.brief-left {
+  max-width: 20rem;
+}
+
+
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 1000px) {
+  .project-intro {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .brief-left {
+    max-width: 40rem;
+  }
+
+  .image-container {
+    width: auto;
+  }
+
+  .footer-content {
+    flex-direction: column;
+  }
+
   .hero {
-      flex-direction: column;
-      align-items: center;
-  }
-  .intro-elements, .client-boxes{
-    flex-direction: column;
-  }
-  .video-text{
     flex-direction: column;
   }
 
+  .hero-left h2,
+  p,
+  h1 {
+    max-width: 22rem;
+  }
+
+  .intro-elements,
+  .client-boxes {
+    flex-direction: column;
+    gap: 0rem;
+  }
+
+  .intro-right {
+    gap: 5rem;
+  }
+
+  .hero-text {
+    width: auto;
+  }
 
 }
 
-footer{
+
+/* FOOTER */
+
+footer {
   display: flex;
   width: auto;
-  height: 19.625rem;
-  padding: 4.125rem 22.9375rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
   align-items: center;
   flex-direction: column;
   background: #F4F4F4;
 
 }
 
-.footer-content{
+.footer-content {
   display: flex;
   align-items: flex-start;
   gap: 3rem;
 }
 
-.profile-image{
+
+.profile-image {
   width: 10.4375rem;
   height: 10.4375rem;
   border-radius: 23.4375rem;
   background: url(https://s3-alpha-sig.figma.com/img/10bb/b533/525b878aaac285a69fec692eb408726c?Expires=1713744000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=bqNHl1ZZaZXJQQg8ao2-CpsfbgIiRFYKiClqSTg2h8PYz-BJdmdmUcBOweyl6MVmrvBsNoyEqmdIM8NZiFBV4dtXZ~c4hs6Eoi6bOsD9rWEI3hIAIUkPh6r5nEut9hHULIct5CafaYdU1XltwP0gVnbU49yWDyMFJIecxX3XjRE0I4dj9wJpngX0ntCfhxTXrNPZR~zZBtUnqs6ArdeM-T9cqY50W71Y~DnjTWagrNNNCEs4EYz06EGizYz2o8ugFdH8z6rW2MRpDDvNkxMtxogGLBI15SKhRzu1gHygM9YlsboztK~kRoPrLO-qalNLGPL53cQIYwp2riv3UizM7g__) lightgray 50% / cover no-repeat;
 }
 
-.footer-header{
+.footer-header {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
-.footer-header h3{
+.footer-header h3 {
   color: #000;
   font-family: "Roobert Pro";
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 500;
-  line-height: 130%; /* 1.95rem */
+  line-height: 130%;
+  /* 1.95rem */
 }
 
-.footer-copy p{
+.footer-copy p {
   width: 19.5625rem;
   color: #000;
   font-family: "Roobert Pro";
   font-size: 1.125rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 130%; /* 1.4625rem */
+  line-height: 130%;
+  /* 1.4625rem */
 }
-.footer-links a{
-  display: inline-block;
-  margin-right: 10px; /* Add spacing between links */
+
+.footer-links a {
+
+  gap: 1rem;
 }
-.intro{
+
+
+/* PROJECT PAGE */
+
+.intro {
   margin-bottom: 3rem;
 }
-.title-elements{
-  display:flex;
+
+.title-elements {
+  display: flex;
   justify-content: space-between;
 }
-.project-image{
+
+.project-image {
   width: 100%;
   border-radius: 1.25rem;
 }
-.intro-elements, .client-boxes{
-  display:flex;
-  gap: 5.62rem;
-  align-items:flex-start;
+
+.intro-elements,
+.client-boxes {
+  display: flex;
+  gap: 5rem;
+  align-items: flex-start;
 }
 
-.video-text{
-  display:flex;
-  gap: 1rem;
+.video-text {
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
 }
-.intro-right{
+
+@media (max-width: 800px) {
+  .video-text {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+
+}
+
+.intro-right {
   display: flex;
   width: 22.875rem;
-  height: 20.375rem;
   justify-content: space-between;
   align-items: flex-start;
   flex-shrink: 0;
 }
-.client-left{
-  background:#EFEFEF;
-  padding:3rem;
+
+.client-left {
+  background: #EFEFEF;
+  padding: 3rem;
   border-radius: 1.25rem;
 }
